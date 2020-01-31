@@ -1,0 +1,78 @@
+body {
+    margin: 0 auto;
+    padding-top: 60px;
+    background-color: lightcoral;
+}
+
+.contentWindow {
+    width: 75%;
+    height: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    overflow: scroll;
+    border: 4px solid cadetblue;
+    border-radius: 20px;
+    background-color: white;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+}
+
+
+p {
+    padding: 30px;
+    font-size: 18pt;
+}
+
+.buttons {
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px 30px;
+}
+
+#Home {
+    margin-right: 11px;
+    color: white;
+    background-color: cadetblue;
+    padding: 10px 30px;
+    font-size: 22px;
+    border-radius: 8px;
+}
+
+#DCpowers {
+    margin-right: 11px;
+    color: white;
+    background-color: cadetblue;
+    padding: 10px 30px;
+    font-size: 22px;
+    border-radius: 8px;
+    
+}
+
+#DCdefeats {
+    margin-right: 11px;
+    color: white;
+    background-color: cadetblue;
+    padding: 10px 30px;
+    font-size: 22px;
+    border-radius: 8px;
+}
+
+#Marvelpowers {
+    margin-right: 11px;
+    color: white;
+    background-color: cadetblue;
+    padding: 10px 30px;
+    font-size: 22px;
+    border-radius: 8px;
+}
+
+#Marveldefeats {
+    color: white;
+    background-color: cadetblue;
+    padding: 10px 30px;
+    font-size: 22px;
+    border-radius: 8px;
+}

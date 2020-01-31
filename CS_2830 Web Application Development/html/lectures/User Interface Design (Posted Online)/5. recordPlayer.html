@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 Web Development at the University of Missouri -->
+<html>
+	<head>
+		<title>jQuery UI: Record Player</title>
+        <style>
+            #recordPlayer {
+                background-image: url(images/recordPlayer.jpg);
+                width: 300px;
+                height: 266px;
+                margin: 15px auto;
+            }
+            #message {
+                text-align: center;
+            }
+            #music {
+                list-style: none;
+            }
+            #music > li {
+                display: inline-block;
+            }
+            .record {
+                width: 290px;
+            }
+        </style>
+        <link href="jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet">
+        <script src="jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+        <script src="jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+        <script>
+            
+            $(function() {
+                $(".record").draggable();
+                
+                $("#recordPlayer").droppable({
+                    drop: function(event, ui) {
+                        console.dir(event);
+                        console.dir(ui);
+                        
+                        var record = ui.draggable;
+                        var artist = record.prop("alt");
+                        
+                        $("#message").html("Now playing: " + artist);
+						
+					}
+               	});
+            });
+            
+        </script>
+	</head>
+	<body>
+        <div id="recordPlayer"></div>
+        <h1 id="message">Now playing...</h1>
+		<ul id="music">
+			<li><img class="record" src="images/KOL.png" alt="Kings of Leon"></li>
+			<li><img class="record" src="images/juju.jpg" alt="JuJu on that Beat"></li>
+			<li><img class="record" src="images/beatles.png" alt="Beatles"></li>
+			<li><img class="record" src="images/bruno-mars-24k-magic-1475846353-compressed.jpg" alt="Bruno Mars"></li>
+			<li><img class="record" src="images/mash.png" alt="Monster Mash"></li>
+			<li><img class="record" src="images/chopstickbrothers.jpg" alt="Chop Stick Brothers"></li>
+			<li><img class="record" src="images/stop.png" alt="Stop"></li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<!--
+    
+    name: Josh Hickman
+    pawprint: hickmanjv
+    date: 02/14/19
+    assignment: Challenge 4 - Tables
+
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="HickmanjvTablesCSS.css">
+        <title>Challenge 4: Tables</title>
+        
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"> 
+    </head>
+    <body>
+        
+        <!-- start of table -->
+        <table id="movieTable">
+            <tr class="tableHeaders topHeader">
+                <th colspan="7" class="permanentMarker"><br>Movie Theatre Showtimes<br><br></th>
+            </tr>
+            <tr class="tableHeaders">
+                <th colspan="7" class="permanentMarker">February 16, 2019</th>
+            </tr>
+            <tr class="columnHeaders">
+                <th><p class="columnNames">Poster</p></th>
+                <th><p class="columnNames">Movie</p></th>
+                <th><p class="columnNames">Rating</p></th>
+                <th><p class="columnNames">Length</p></th>
+                <th colspan="2"><p class="columnNames">ShowTimes</p></th>
+                <th><p class="columnNames">Amenities</p></th>
+            </tr>   
+            <!-- end of headings -->
+            
+                <!-- Row for first movie starts -->
+                <tr class="firstRow evenRow">
+                    <td rowspan="4">
+                        <img class="moviePosters" src="Pictures/LegoMovie2.jpg" alt="Lego Movie 2">
+                    </td>
+                    <td rowspan="4">The Lego Movie 2</td>
+                    <td rowspan="4" class="oddColumn">PG</td>
+                    <td rowspan="4">106 Minutes</td>
+                    <td class="earlyShow"> <p class="times oddColumn">1:10PM</p> </td>
+                    <td class="earlyShow"> <p class="times oddColumn">1:40PM</p> </td>
+                    <td rowspan="4">
+                        <p>
+                            Closed Caption,<br>
+                            Descriptive Video,<br>
+                            Stadium Seating
+                        </p>
+                    </td>
+                </tr>
+                <tr class="firstRow evenRow">
+                    <td class="earlyShow"> <p class="times oddColumn">4:05PM</p> </td>
+                    <td class="earlyShow"> <p class="times oddColumn">4:30PM</p> </td>
+                </tr>
+                <tr class="firstRow evenRow">
+                    <td> <p class="times oddColumn">6:40PM</p> </td>
+                    <td> <p class="times oddColumn">7:10PM</p> </td>
+                </tr>
+                <tr class="firstRow evenRow">
+                    <td> <p class="times oddColumn">9:25PM</p> </td>
+                    <td> <p class="times oddColumn">9:50 PM - 3D</p> </td>
+                </tr>
+                <!-- Row for first movie ends -->
+            
+                <!-- Row for 2nd movie starts -->
+                <tr class="secondRow oddRow">
+                    <td rowspan="3">
+                        <img class="moviePosters" src="Pictures/Romantic.jpg" alt="Isn't It Romantic">
+                    </td>
+                    <td rowspan="3">Isn't It Romantic</td>
+                    <td rowspan="3" class="oddColumn">PG-13</td>
+                    <td rowspan="3">89 Minutes</td>
+                    <td class="earlyShow"> <p class="times oddColumn">12:00PM</p> </td>
+                    <td class="earlyShow"> <p class="times oddColumn">2:30PM</p> </td>
+                    <td rowspan="3">
+                        <p>
+                            Closed Caption,<br>
+                            Descriptive Video,<br>
+                            Stadium Seating
+                        </p>
+                    </td>
+                </tr>
+                <tr class="secondRow oddRow">
+                    <td> <p class="times oddColumn">5:00PM</p> </td>
+                    <td> <p class="times oddColumn">7:30PM</p> </td>
+                </tr>
+                <tr class="secondRow oddRow">
+                    <td> <p class="times oddColumn">9:55PM</p> </td>
+                    <td> <p class="times oddColumn"></p></td>
+                </tr>
+                <!-- Row for 2nd movie ends -->
+        </table>
+        <!-- end of table -->
+        
+        <!-- Beginning of Wrapper Div -->
+        <div id="movieContainer">
+            
+            <!-- start of left column -->
+            <img class="cssTablePoster movieColumn" src="Pictures/LegoMovie2.jpg" alt="Lego Movie 2">
+            <!-- end of left column -->
+            
+            <!-- start of middle column -->
+            <div class="movieColumn middleColumn">
+                
+                    <p>The Lego Movie 2</p>
+    
+                    <hr class="hrTagLeft">
+                
+                    <p>PG | 1 hr. 06 min.</p>
+                
+                    <p class="bottomText"><br><br><br>CC, DV, SS</p>
+            </div>
+            <!-- end of middle column -->
+            
+            <!-- start of right column -->
+            <div class="movieColumn rightColumn">
+                
+                    <p>Viewing Times</p>
+                
+                    <hr class="hrTagRight">
+               
+                    <h5 class="viewTimes leftTime smaller">1:10PM</h5>
+                    <h5 class="viewTimes">1:40PM</h5>
+               
+                    <h5 class="viewTimes leftTime bigger">4:05PM</h5>
+                    <h5 class="viewTimes bigger">4:30PM</h5>
+                
+                    <h5 class="viewTimes leftTime bigger">6:40PM</h5>
+                    <h5 class="viewTimes">7:10PM</h5>
+                
+                    <h5 class="viewTimes leftTime bigger">9:25PM</h5>
+                    <h5 class="viewTimes bigger">9:50PM</h5>
+            </div>
+            <!-- end of right column -->
+            
+        </div>
+        <!-- end of CSS3Table Wrapper -->
+    </body>
+</html>

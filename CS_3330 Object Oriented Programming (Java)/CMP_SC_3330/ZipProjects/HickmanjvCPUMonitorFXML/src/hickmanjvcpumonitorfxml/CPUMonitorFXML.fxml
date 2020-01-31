@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="984.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hickmanjvcpumonitorfxml.CPUMonitorFXMLController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="488.0" minWidth="10.0" prefWidth="407.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="578.0" minWidth="10.0" prefWidth="577.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <ImageView fitHeight="395.0" fitWidth="608.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+         <image>
+            <Image url="@Bob%20Ross.jpg" />
+         </image>
+      </ImageView>
+      <StackPane fx:id="analogCPU" prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <ImageView fx:id="cpuFace" fitHeight="367.0" fitWidth="354.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@gauge.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="handImageView" fitHeight="351.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" rotate="-136.0">
+               <image>
+                  <Image url="@hand.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="digitalCPU" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="235.0" text="CPU :  " textAlignment="CENTER" textFill="WHITE" translateY="-50.0">
+               <font>
+                  <Font name="Times New Roman Bold" size="34.0" />
+               </font>
+            </Label>
+         </children></StackPane>
+      <HBox fx:id="buttonBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="92.0" prefWidth="242.0" translateY="-20.0" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" GridPane.vgrow="NEVER">
+         <padding>
+            <Insets bottom="15.0" left="10.0" right="10.0" />
+         </padding>
+         <children>
+            <Button fx:id="startButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#start" prefHeight="35.0" prefWidth="80.0" text="Start" translateX="18.0" translateY="25.0">
+               <font>
+                  <Font name="Arial Bold Italic" size="16.0" />
+               </font></Button>
+            <Button fx:id="recordButton" layoutX="20.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#record" prefHeight="35.0" prefWidth="80.0" text="Record" translateX="50.0" translateY="25.0">
+               <font>
+                  <Font name="Arial Bold Italic" size="16.0" />
+               </font></Button>
+         </children>
+      </HBox>
+      <Label fx:id="recordBoard" alignment="CENTER" contentDisplay="CENTER" prefHeight="39.0" prefWidth="367.0" text="    Record Board" textAlignment="CENTER" translateY="-100.0" GridPane.columnIndex="1">
+         <font>
+            <Font name="Times New Roman Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="label1" alignment="CENTER" prefHeight="28.0" prefWidth="398.0" text="--.--%  idle" textAlignment="CENTER" translateY="-40.0" GridPane.columnIndex="1">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="label2" alignment="CENTER" layoutX="410.0" layoutY="296.0" prefHeight="28.0" prefWidth="398.0" text="--.--%  idle" textAlignment="CENTER" translateY="-10.0" GridPane.columnIndex="1">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="label3" alignment="CENTER" layoutX="410.0" layoutY="296.0" prefHeight="28.0" prefWidth="398.0" text="--.--%  idle" textAlignment="CENTER" translateY="20.0" GridPane.columnIndex="1">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</GridPane>

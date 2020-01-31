@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+<html>
+<head>
+	<title>AJAX - Response as XML</title>
+	<script>
+		function getMovies() {
+			var xmlHttp = new XMLHttpRequest();
+		
+			xmlHttp.onload = function() {
+				if (xmlHttp.status == 200) {
+					var xmlDoc = xmlHttp.responseXML;
+				
+					var output = '<ul>';
+				
+					movieTitles = xmlDoc.getElementsByTagName('title');
+					movieYears = xmlDoc.getElementsByTagName('year');
+				
+					console.dir(movieTitles); 
+				
+					for (i = 0; i < movieTitles.length; i++) {
+						output += "<li>" + movieTitles[i].childNodes[0].nodeValue + " created "
+                        movieYears[i].childNodes[0].nodeValue + "</li>";
+					}
+                    
+                    output += "</ul>";
+				
+					var divObj = document.getElementById('movieBox');
+				
+					divObj.innerHTML = output;
+				}
+			}
+		
+			xmlHttp.open("GET", "movies.xml", true);
+			xmlHttp.send();
+		}
+	</script>
+</head>
+<body>
+	<h1>My Movies</h1>
+	<div id="movieBox"></div>
+	<button type="button" onclick="getMovies()">Get Movie Titles</button>
+</body>
+</html>

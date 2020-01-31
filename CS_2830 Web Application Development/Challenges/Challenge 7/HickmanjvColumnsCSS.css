@@ -1,0 +1,128 @@
+/* 
+    Name: Josh Hickman
+    Pawprint: hickmanjv
+    Date: 02/06/19
+    Challenge 3: Multi-Column Layout
+*/
+body {
+    margin: 0px;
+}
+
+.head {
+    text-align: center;
+}
+
+#columns {
+    width: 1090px;
+    padding: 10px;
+    margin: 20px auto;
+    border: 10px outset darkred;
+    border-radius: 100px;
+}
+
+#leftColumn {
+    float: left;
+    border: 10px outset darkslateblue;
+    border-radius: 50px 15px;
+    width: 225px;
+    padding: 20px;
+    margin: 20px;
+    height: 400px;
+    background-color: lightgray;
+    text-indent: 20px;
+    /*  Found this CSS property to help me scroll in the column wrapper
+        w3schools - CSS overflow Property
+        https://www.w3schools.com/cssref/pr_pos_overflow.asp */
+    overflow: scroll; 
+    /*  end of online help */
+}
+
+#middleRows {
+    float: left;
+    width: 438px;
+    margin: 20px;  /* Put the margin calc here since this covers both rows */
+}
+
+#topRow {
+    width: 378px;
+    padding: 20px;
+    border: 10px outset cadetblue;
+    border-radius: 50px 50px 50px 50px;
+    margin-bottom: 30px;
+    height: 155px;
+    background-color: lightgray;
+}
+
+#bottomRow {
+    width: 378px;
+    padding: 20px;
+    border: 10px outset cadetblue;
+    border-radius: 50px 50px 50px 50px;
+    height: 155px;
+    background-color: lightcyan;
+}
+
+#rightColumn {
+    float: left;
+    border: 10px outset darkslateblue;
+    border-radius: 15px 50px;
+    width: 187px;
+    padding: 20px;
+    margin: 20px;
+    height: 400px;
+    background-color: lightcyan;
+    overflow: scroll;
+}
+
+.navbar a {
+    display: block;
+    color: ghostwhite;
+    background-color: darkslategray;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+.navbar a:hover{
+    background-color: cadetblue;
+}
+
+.navbar .active {
+    background-color: cadetblue;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: darkslategray;
+}
+
+li {
+    float: left;
+}
+
+h3 {
+    text-align: center;
+}
+
+.columnHeaders {
+    margin: 0;
+}
+.rowHeaders {
+    text-align: center;
+    margin: 0;
+}
+
+.widthCalculations {
+    text-align: justify;
+}
+
+/* Clear Hack */
+.allColumns {
+    content: "";
+    display: table;
+    clear: both;
+}

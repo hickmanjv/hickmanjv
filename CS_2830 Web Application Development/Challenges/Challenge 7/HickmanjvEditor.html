@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<!--
+    name: Josh Hickman
+    pawprint: hickmanjv
+    date: 2/25/19
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="HickmanjvEditorCSS.css">
+        <title>Code Editor</title>
+    </head>
+    <body>
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html" target="_self">Home</a></li>
+                <li><a href="HickmanjvSettingUp.html" target="_self">Challenge 1</a></li>
+                <li><a href="HickmanjvHNavbarBio.html" target="_self">Challenge 2</a></li>
+                <li><a href="HickmanjvColumns.html" target="_self">Challenge 3</a></li>
+                <li><a href="HickmanjvTables.html" target="_self">Challenge 4</a></li>
+                <li><a class="active" href="HickmanjvEditor.html" target="_self">Challenge 6</a></li>
+            </ul>
+        </div>
+        <h1 id="pageTitle" class="pageTitle">Code Editor</h1>
+        <div id="wrapper">
+            <form class="textForms" action="#" method="get">
+                <div>
+                    <textarea id="cssBox" class="textArea" name="cssText" rows="22" cols="100" placeholder="CSS goes here..." onclick="changeShadow()" ondblclick="setInitialCSS()"></textarea> <br><br>
+                </div>
+                <div>
+                    <textarea id="htmlBox" class="textArea" name="htmlText" rows="22" cols="100" placeholder="HTML goes here..." onclick="changeShadow()" ondblclick="setInitialHTML()"></textarea>
+                </div>
+                <div>
+                    <button id="htmlButton" type="button" onclick="allHTML()">HTML</button>
+                    <button id="cssButton" type="button" onclick="allCSS()">CSS</button>
+                    <button id="eraseButton" type="reset" onclick="clearTextarea()">Erase</button>
+                </div>
+            </form>
+        
+            <div id="codeDisplay" class="displayArea">
+                <iframe id="code" name="code"></iframe>
+            </div>
+        </div>
+        
+        <div id="bottomHeaderDiv">
+            <h4 id="nickname" class="nickname" ondblclick="titleChange()">By: Josh Hickman</h4>
+        </div>
+        
+        <script src="HickmanjvEditorJS.js"></script>
+    </body>
+</html>

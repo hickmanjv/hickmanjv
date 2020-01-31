@@ -1,0 +1,63 @@
+body {
+    background-color: lightblue;
+    margin: 0px;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+
+.header1 {
+    width: 600px;
+    height: 2t00px;
+    margin: 20px auto;
+    line-height: 150px;
+}
+
+.info {
+    margin: 50px auto;
+    width: 600px;
+    height: 200px;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: darkslategray;
+}
+
+li {
+    float: left;
+}
+
+.navbar a {
+    display: block;
+    color: ghostwhite;
+    background-color: darkslategray;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+.navbar a:hover{
+    background-color: cadetblue;
+}
+
+.navbar .active {
+    background-color: cadetblue;
+}

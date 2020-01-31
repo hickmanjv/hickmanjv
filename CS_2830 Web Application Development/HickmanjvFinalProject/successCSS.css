@@ -1,0 +1,41 @@
+body {
+    margin: 0 auto;
+    background-color: firebrick;
+}
+
+.Wrapper {
+    height: 500px;
+    width: 40%;
+    background-color: white;
+    border: 2px solid antiquewhite;
+    margin: 0 auto;
+    margin-top: 150px;
+    text-align: center;
+}
+
+.success {
+    margin-top: 10px;
+    font-size: 1.4em;
+}
+
+#first {
+    margin-top: 100px;
+}
+
+#couponButton {
+    margin-top: 50px;
+    margin-right: 265px;
+}
+
+#wrapBox {
+    height: 100px;
+    width: 40%;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 110px;
+    border: 2px solid firebrick;
+    text-align: center;
+}
+#couponWindow {
+    margin-top: 20px;
+}

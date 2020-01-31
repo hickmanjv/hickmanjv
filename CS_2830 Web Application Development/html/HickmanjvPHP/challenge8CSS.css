@@ -1,0 +1,55 @@
+body {
+    background-color: aliceblue;
+    margin: 0 auto;
+}
+
+.container {
+    margin: 20px auto;
+    width: 80%;
+    height: 700px;
+    padding: 30px 60px 30px 60px;
+    border: outset cadetblue 8px;
+    overflow: scroll;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    margin: 30px 5px 30px 5px;
+    border: outset black 4px;
+}
+
+.pic {
+    display: block;
+    margin: 0 auto;
+}
+
+.nav1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: darkslategray;
+}
+
+.nav2 {
+    float: left;
+}
+
+.navbar a {
+    display: block;
+    color: ghostwhite;
+    background-color: darkslategray;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+.navbar a:hover{
+    background-color: cadetblue;
+}
+
+.navbar .active {
+    background-color: cadetblue;
+}

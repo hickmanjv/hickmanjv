@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- @author Professor Wergeles <Professor Wergeles at cs3330@missouri.edu> -->
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="473.0" prefWidth="416.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvccpumonitorfxml.Controller">
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+    <children>
+      <StackPane prefHeight="211.0" prefWidth="353.0">
+         <children>
+            <ImageView fitHeight="214.0" fitWidth="331.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+               <image>
+                  <Image url="@clockface.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="hand" fitHeight="186.0" fitWidth="190.0" pickOnBounds="true" preserveRatio="true">
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+               <image>
+                  <Image url="@hand.png" />
+               </image>
+            </ImageView>
+         </children>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </StackPane>
+      <VBox alignment="CENTER" prefHeight="217.0" prefWidth="250.0" spacing="20.0">
+         <children>
+            <VBox>
+               <children>
+                  <Text fx:id="record0" fill="#b50f0f" strokeLineCap="ROUND" strokeWidth="0.0" text="--.--" textOrigin="CENTER" wrappingWidth="99.6064453125">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="170.0" right="150.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text fx:id="record1" strokeType="OUTSIDE" strokeWidth="0.0" text="--:--.--" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="183.0" right="183.0" top="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text fx:id="record2" strokeType="OUTSIDE" strokeWidth="0.0" text="--:--.--" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="183.0" right="183.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text fx:id="record3" strokeType="OUTSIDE" strokeWidth="0.0" text="--:--.--" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="183.0" right="183.0" />
+                     </VBox.margin>
+                  </Text>
+                  <HBox alignment="CENTER" prefHeight="47.0" prefWidth="244.0">
+                     <children>
+                        <Button fx:id="startStopButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#startStopMonitor" prefWidth="60.0" text="Start" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="recordResetButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#recordResetMonitor" text="Record">
+                           <opaqueInsets>
+                              <Insets left="50.0" right="50.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets bottom="20.0" top="20.0" />
+         </VBox.margin>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

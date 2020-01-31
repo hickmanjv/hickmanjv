@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hickmanjvmvcstopwatchfxml.MVCStopwatchController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <StackPane prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="279.0" fitWidth="318.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@clockface.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="handImageView" fitHeight="267.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@hand.png" />
+               </image>
+            </ImageView>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="121.0" prefWidth="326.0" translateY="200.0">
+               <children>
+                  <Button fx:id="startButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#start" prefHeight="35.0" prefWidth="100.0" text="Start" translateX="50.0" translateY="42.0" />
+                  <Button fx:id="recordButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#record" prefHeight="35.0" prefWidth="100.0" text="Record" translateX="90.0" translateY="42.0" />
+               </children>
+            </HBox>
+            <Label fx:id="digitalClockLabel" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="321.0" text="--:--.--" translateY="-200.0">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </StackPane>
+      <Label fx:id="recordBoardLabel" alignment="CENTER" prefHeight="54.0" prefWidth="398.0" text="Record Board" translateY="-130.0" GridPane.columnIndex="1">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="recordLabel1" alignment="CENTER" prefHeight="48.0" prefWidth="398.0" text="--:--.--" textAlignment="CENTER" translateY="-80.0" GridPane.columnIndex="1">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="recordLabel2" alignment="CENTER" layoutX="410.0" layoutY="286.0" prefHeight="48.0" prefWidth="398.0" text="--:--.--" textAlignment="CENTER" translateY="-20.0" GridPane.columnIndex="1">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="recordLabel3" alignment="CENTER" layoutX="410.0" layoutY="286.0" prefHeight="48.0" prefWidth="398.0" text="--:--.--" textAlignment="CENTER" translateY="40.0" GridPane.columnIndex="1">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</GridPane>

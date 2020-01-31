@@ -1,0 +1,19 @@
+body {
+    background-color: antiquewhite;
+}
+
+img {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 256px;
+}
+
+h3 {
+    text-align: right;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}

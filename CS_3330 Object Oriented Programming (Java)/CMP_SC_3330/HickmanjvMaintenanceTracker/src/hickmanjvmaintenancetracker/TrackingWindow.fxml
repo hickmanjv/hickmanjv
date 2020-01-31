@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hickmanjvmaintenancetracker.TrackingWindowController">
+   <children>
+      <TableView fx:id="requestTable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="1000.0" translateX="100.0" translateY="20.0">
+        <columns>
+            <TableColumn prefWidth="32.0" text="ID" />
+          <TableColumn fx:id="floorColumn" prefWidth="120.0" text="Floor" />
+          <TableColumn fx:id="roomColumn" prefWidth="91.0" text="Room #" />
+            <TableColumn fx:id="departmentColumn" prefWidth="184.0" text="Dept" />
+            <TableColumn fx:id="descriptionColumn" prefWidth="572.0" text="Description" />
+        </columns>
+      </TableView>
+      <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addNewRequest" prefHeight="27.0" prefWidth="105.0" text="Add Request" translateX="1000.0" translateY="66.0" />
+      <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleGoToStartWindow" prefHeight="27.0" prefWidth="105.0" text="Back" translateX="1000.0" translateY="128.0" />
+      <Button mnemonicParsing="false" onAction="#deleteRow" prefHeight="27.0" prefWidth="105.0" text="Clear Request" translateX="100.0" translateY="100.0" />
+      <Label alignment="CENTER" prefHeight="21.0" prefWidth="40.0" text="Floor" translateX="170.0" translateY="-40.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldFloor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="100.0" promptText="Floor" translateX="140.0" translateY="-35.0" />
+      <TextField fx:id="textFieldRoom" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="75.0" promptText="Room" translateX="260.0" translateY="-62.0" />
+      <Label alignment="CENTER" text="Room #" translateX="272.0" translateY="-113.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" text="Department" translateX="396.0" translateY="-130.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldDepartment" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="175.0" promptText="Dept" translateX="350.0" translateY="-125.0" />
+      <TextField fx:id="textFieldDescription" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="420.0" promptText="Info" translateX="550.0" translateY="-152.0" />
+      <Label text="Brief Description" translateX="700.0" translateY="-202.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deleteAllRequests" prefHeight="27.0" prefWidth="105.0" text="Clear All" translateX="100.0" translateY="-20.0" />
+   </children>
+</VBox>

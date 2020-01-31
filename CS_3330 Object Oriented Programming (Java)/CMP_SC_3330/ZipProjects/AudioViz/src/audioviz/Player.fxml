@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="audioviz.PlayerController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleOpen" text="Open" />
+            </items>
+          </Menu>
+          <Menu fx:id="visualizersMenu" mnemonicParsing="false" text="Visualizers" />
+            <Menu fx:id="bandsMenu" mnemonicParsing="false" text="Bands" />
+        </menus>
+      </MenuBar>
+      <AnchorPane id="AnchorPane" depthTest="DISABLE" prefHeight="583.0" prefWidth="786.0" styleClass="mainFxmlClass">
+          <stylesheets>
+              <URL value="@player.css" />
+          </stylesheets>
+         <children>
+            <AnchorPane fx:id="vizPane" layoutX="217.0" layoutY="95.0" prefHeight="500.0" prefWidth="569.0">
+               <children>
+                  <ImageView fx:id="image2" fitHeight="114.0" fitWidth="102.0" layoutX="54.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/HickmanjvRockCrowd2.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="image6" fitHeight="102.0" fitWidth="71.0" layoutX="306.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/HickmanjvRockCrowd3.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="image5" fitHeight="102.0" fitWidth="83.0" layoutX="212.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/HickmanjvRockCrowd4.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="image1" fitHeight="80.0" fitWidth="83.0" layoutX="46.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/HickmanjvRockCrowd5.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="image8" fitHeight="88.0" fitWidth="109.0" layoutX="377.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/HickmanjvRockCrowd6.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="image3" fitHeight="88.0" fitWidth="109.0" layoutX="138.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/HickmanjvRockCrowd7.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="image4" fitHeight="100.0" fitWidth="64.0" layoutX="251.0" layoutY="281.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/HickmanjvRockCrowd8.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="image9" fitHeight="88.0" fitWidth="109.0" layoutX="465.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/HickmanjvRockCrowd9.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="image7" fitHeight="86.0" fitWidth="82.0" layoutX="341.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/HickmanjvRockCrowd1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="discoBall" fitHeight="124.0" fitWidth="136.0" layoutX="223.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/HickmanjvDiscoBall.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+            <Button layoutX="25.0" layoutY="58.0" mnemonicParsing="false" onAction="#handlePlay" text="Play" />
+            <Button layoutX="78.0" layoutY="58.0" mnemonicParsing="false" onAction="#handlePause" text="Pause" />
+            <Button layoutX="142.0" layoutY="58.0" mnemonicParsing="false" onAction="#handleStop" text="Stop" />
+            <Text fx:id="lengthText" layoutX="86.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Label layoutX="28.0" layoutY="112.0" text="Length:" />
+            <Label layoutX="25.0" layoutY="137.0" text="Current:" />
+            <Text fx:id="currentText" layoutX="86.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="errorText" fill="RED" layoutX="25.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="200.0" layoutX="34.0" layoutY="151.0" />
+            <Text fx:id="filePathText" layoutX="25.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="visualizerNameText" layoutX="450.0" layoutY="569.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Text>
+            <Label layoutX="31.0" layoutY="161.0" text="Bands:" />
+            <Text fx:id="bandsText" layoutX="86.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Slider fx:id="timeSlider" layoutX="266.0" layoutY="63.0" onMousePressed="#handleSliderMousePressed" onMouseReleased="#handleSliderMouseReleased" prefHeight="16.0" prefWidth="476.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+<html>
+<head>
+	<title>AJAX Login</title>
+	<style>
+	body {
+		text-align: center;
+	}
+	#stage {
+		border: 1px solid #ccc;
+		padding: 5px;
+		margin: 25px;
+		font-size: 16pt;
+	}
+	</style>
+	<script src="jquery-3.2.1.min.js"></script>
+	<script>
+	/*
+		This is a small proof-of-concept demo I put together to show you that AJAX login is possible.
+	*/
+	$(function(){
+		$('#login').click(function(){
+			$.post('process.php', 
+			{
+				action: 'login',
+				username: $('#username').val(),
+				password: $('#password').val()
+			},
+			function(data){
+				$('#stage').html(data);
+			});
+		});
+		$('#logout').click(function(){
+			$.post('process.php', { action: 'logout' }, function(data){
+				$('#stage').html(data);
+			});
+		});
+		$('#get').click(function(){
+			$.post('process.php',
+			{
+				action: 'get'
+			},
+			function(data){
+				$('#stage').html(data);
+			});
+		});
+	});
+	</script>
+</head>
+<body>
+	<div id="stage">Stage</div>
+	<input type="text" id="username">
+	<input type="password" id="password">
+	<button id="login">Login</button>
+	<button id="logout">Logout</button>
+	<button id="get">Get Content</button>
+</body>
+</html>

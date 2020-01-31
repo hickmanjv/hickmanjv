@@ -1,0 +1,140 @@
+body {
+    margin: auto;
+    background-color: skyblue;
+}
+
+.pageTitle {
+    text-align: center
+}
+
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1400px;
+    height: 650px;
+    padding: 20px 40px 20px 40px;
+}
+
+.textForms {
+    float: left;
+    margin-right: 40px;
+    overflow: hidden;
+}
+
+#cssBox {
+    border: 3px solid darkblue;
+    box-shadow: 10px 10px 10px;
+    border-radius: 8px;
+}
+
+/* credit to solution by Passerby in comments below initial question of Stackoverflow
+    https://www.stackoverflow.com/questions/13228615/on-click-box-shadow-shadow-javascript-not-jquery */
+#cssBox:active, #cssBox:focus{
+    box-shadow: 8px 8px 8px yellow;
+}
+
+#htmlBox {
+    border: 3px solid darkblue;
+    box-shadow: 10px 10px 10px;
+    border-radius: 8px;
+}
+
+/* credit to solution by Passerby in comments below initial question of Stackoverflow
+    https://www.stackoverflow.com/questions/13228615/on-click-box-shadow-shadow-javascript-not-jquery */
+#htmlBox:active, #htmlBox:focus{
+    box-shadow: 8px 8px 8px yellow;
+}
+
+#htmlButton {
+    padding: 3px 25px;
+    font-size: 20px;
+    border: 2px solid gold;
+    text-align: center;
+    color: gold;
+    background-color: black;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#cssButton {
+    padding: 3px 25px;
+    font-size: 20px;
+    border: 2px solid black;
+    text-align: center;
+    background-color: gold;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+
+#eraseButton {
+    padding: 3px 25px;
+    font-size: 20px;
+    border: 2px solid gold;
+    text-align: center;
+    
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+.displayArea {
+    float: left;
+    width: 724px;
+    height: 611px;
+    background-color: white;
+    border: 3px dashed darkblue;
+    box-shadow: 10px 10px 40px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#bottomHeaderDiv {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.nickname {
+    text-align: center;
+    z-index: 100;
+}
+
+/* Couldn't get the tooltip to work, credit to this code is due to 
+    w3schools.com  the Tooltip section. I just couldn't get it right */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 8px;
+    
+    position: absolute;
+    top: 30px;
+    left: 0%;
+    z-index: 10;
+    
+}
+
+.tooltip:hover .tooltiptext{
+    visibility: visible;
+    opacity: 0.7;
+}
+
+/* end of w3schools tooltip code */
+
+/* iframe dimensions */
+#code {
+    width: 722px;
+    height: 609px;
+}
+

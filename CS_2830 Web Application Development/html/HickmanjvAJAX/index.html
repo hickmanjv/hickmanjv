@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<!- 
+    name: Josh Hickman
+    pawprint: hickmanjv
+    date: 04/15/19
+-->
+
+<html lang="en">
+    <head>
+        <title>Demonstrating AJAX</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="HickmanjvAJAXCSS.css">
+        
+        <script>
+            
+            function updateWindowXML(buttonID) {
+                
+                var xmlHttp = new XMLHttpRequest();
+                
+                var windowObj = document.getElementById("innerText");
+                
+                if(buttonID == "Home"){
+                        var output = "This web application provides information about Marvel and DC Heroes";
+                            
+                        windowObj.innerHTML = output;
+                    
+                        return;
+                }
+                
+                xmlHttp.onload = function()
+                {
+                    // .onload already waits for readyState == 4
+                    if(xmlHttp.status == 200)
+                    {
+                        
+                        var xmlDoc = xmlHttp.responseXML;
+                        
+                        var output2 = "<ul>";
+                        
+                        var marvelHeroes = xmlDoc.getElementsByTagName("name");
+                        var marvelPowers = xmlDoc.getElementsByTagName("power");
+                        var marvelDefeat = xmlDoc.getElementsByTagName("defeat");
+                        
+                        //console.dir(marvelHeroes);
+                        
+                        for(var i = 0; i < marvelHeroes.length; i++)
+                        {    
+                            if(buttonID == "Marvel Powers"){
+                                output2 += "<li>" + marvelHeroes[i].childNodes[0].nodeValue + "'s super power is: " + 
+                                marvelPowers[i].childNodes[0].nodeValue + "</li>";
+                            }
+                            
+                            if(buttonID == "Marvel Defeats"){
+                                output2 += "<li>" + marvelHeroes[i].childNodes[0].nodeValue + " defeats " + 
+                                marvelDefeat[i].childNodes[0].nodeValue + "</li>";
+                            }
+                            
+                        }
+                        
+                        output2 += "</ul>";
+                        
+                        var windowObj = document.getElementById("innerText");
+                        
+                        windowObj.innerHTML = output2;
+                    }
+                };
+                
+                
+                document.getElementById("innerText").innerHTML = "Loading...";
+                
+                var reqURL = "http://www.professorwergeles.com/CS2830/webService.php?content=data&format=xml";
+            
+                xmlHttp.open("GET", reqURL, true);
+                xmlHttp.send();
+            }
+            
+            function updateWindowJSON(buttonID){
+                
+                var xmlHttp = new XMLHttpRequest();
+                
+                
+                xmlHttp.onload = function(){
+                  
+                    if(xmlHttp.status == 200)
+                    {
+                        var response = xmlHttp.responseText;
+                        
+                        var output2 = '<ul>';
+                        //console.dir(response);
+                        
+                        response = JSON.parse(response);
+                        //var test = response.dc[0].nm;
+                        //console.log(test);
+                        //console.dir(response);
+                        
+                        for(var i = 0; i < response.dc.length; i++)
+                        {    
+                            if(buttonID == "DC Powers"){
+                                var hero = response.dc[i];
+                                output2 += "<li>" + hero.nm + "'s super powers are: " + hero.pwr + "</li>";
+                            }
+                            
+                            if(buttonID == "DC Defeats"){
+                                var hero = response.dc[i];
+                                output2 += "<li>" + hero.nm + " defeats " + hero.dft + "</li>";
+                            }
+                            
+                        }
+                        
+                        output2 += "</ul>";
+                        
+                        var windowObj = document.getElementById("innerText");
+                        
+                        windowObj.innerHTML = output2;
+                        
+                    }
+                };
+                
+                document.getElementById("innerText").innerHTML = "Loading...";
+                
+                
+                
+                var reqURL = "http://www.professorwergeles.com/CS2830/webService.php?content=data&format=json";
+                
+                xmlHttp.open("GET", reqURL, true);
+                xmlHttp.send();
+            }
+            
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>DC vs Marvel Hero Information</h1>
+        </div>
+    
+        <div class="contentWindow" id="content">
+            <p id="innerText"></p>
+        </div>
+        
+        <div class="buttons">
+            <button id="Home" onclick="updateWindowXML('Home')">Home</button>
+            <button id="DCpowers" onclick="updateWindowJSON('DC Powers')">DC Powers</button>
+            <button id="DCdefeats" onclick="updateWindowJSON('DC Defeats')">DC Defeats</button>
+            <button id="Marvelpowers" onclick="updateWindowXML('Marvel Powers')">Marvel Powers</button>
+            <button id="Marveldefeats" onclick="updateWindowXML('Marvel Defeats')">Marvel Defeats</button> 
+        </div>
+        
+    </body>
+</html>

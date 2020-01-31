@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+<html>
+<head>
+	<title>Multiple File Upload</title>
+</head>
+<body>
+	<h1>Upload Form Test</h1>
+	<p>Select one or more files and then click the Upload button.</p>
+
+	<form action="uploadHandler.php" method="POST" enctype="multipart/form-data">
+		<p>
+			<label>File:</label>
+                <!--
+                    One method would be to use multiple <input> tags
+                    <input type="file" name="file1">
+                    <input type="file" name="file2">
+                    <input type="file" name="file3">
+                -->
+            
+                <!-- A better method would be using a single <input> tag and the 'multiple' boolean attribute. -->
+                <input type="file" name="files[]" multiple>
+            
+		</p>
+		<input name="submit" type="submit" value="Upload">
+	</form>
+</body>
+</html>

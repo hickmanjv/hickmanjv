@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hickmanjvmaintenancetracker.StartWindowController">
+   <children>
+      <Label layoutX="10.0" layoutY="10.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="55.0" prefWidth="600.0" text="MaintenanceTracker" textAlignment="CENTER" textFill="WHITE" translateX="440.0" translateY="200.0">
+         <font>
+            <Font name="Arial Bold Italic" size="60.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="45.0" prefWidth="222.0" text="MICU" textAlignment="CENTER" textFill="WHITE" translateX="200.0" translateY="120.0">
+         <font>
+            <Font name="Helvetica Bold" size="72.0" />
+         </font>
+      </Label>
+      <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleGoToTrackingWindow" prefHeight="45.0" prefWidth="130.0" text="Add Request" translateX="400.0" translateY="295.0" />
+      <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleAbout" prefHeight="45.0" prefWidth="130.0" text="About" translateX="700.0" translateY="250.0" />
+   </children>
+</VBox>

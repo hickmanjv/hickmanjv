@@ -1,0 +1,107 @@
+/*
+    name: Josh Hickman
+    pawprint: hickmanjv
+    date: 1/31/19
+    
+    CSS Stylesheet for Challenge 2
+*/
+
+.navbar a {
+    display: block;
+    color: ghostwhite;
+    background-color: darkslategray;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+}
+
+.navbar a:hover{
+    background-color: cadetblue;
+}
+
+.navbar .active {
+    background-color: cadetblue;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: darkslategray;
+}
+
+li {
+    float: left;
+}
+
+.nameHeader {
+    text-align: right;
+    padding-right: 15px;
+    position: relative;
+    color: darkslategray;
+    border: 5px double darkslategray;
+    border-width: 15px;
+}
+
+.nameHeader::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    border: 5px solid cadetblue; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(Images/abstract-abstract-photo-architecture-1029622.jpg);
+    background-size: auto;
+}
+
+.bio {
+    color: darkblue;
+    border: 2px dashed cadetblue;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+    padding-bottom: 130px;
+    text-align: justify;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+#crops {
+    float: left;
+    padding-right: 25px;
+    padding-bottom: 15px;
+    width: 400px;
+    height: auto;
+}
+
+.hobbies {
+    color: darkblue;
+    border: 2px dotted cadetblue;
+    margin-top: 80px;
+    padding: 10px;
+    padding-bottom: 130px;
+    text-align: justify;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+#stadium {
+    float: right;
+    padding-left: 25px;
+    padding-bottom: 15px;
+    width: 400px;
+    height: auto;
+}
+
+.pageImages {
+    content: "";
+    display: table;
+    clear: both;
+}

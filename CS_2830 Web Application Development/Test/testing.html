@@ -1,0 +1,58 @@
+<!DOCTYPE>
+
+<html>
+<head>
+   <title>Demo</title>
+    
+    <style>
+        div.a {
+            color: red;
+        }
+    
+    </style>
+ 
+</head>
+<body>
+   
+    <p class="a" id="test">dajsdfksajd</p>
+    <div class="a"><p>aksdjfaskldjf</p></div>
+    
+    <input name="age" value="16" />
+    <img href='myImage.png' alt='image1' />
+    <form action="/action_page.php" method="post"></form>
+    
+<h1><a href='home.html' style="text-decoration: none">Home button</a></h1>
+    
+    <p>The students really want to get a <span>100k per year job</span>.</p>
+    <script>
+        var cars = ["BMW", "Volvo", "Saab", "Fjord"];
+
+        var i = 0;
+        var len = cars.length;
+        var text = "";
+
+        for (; i < len; ) {
+        text += cars[i];
+        document.getElementById("test").innerHTML = text;
+        i++;
+        }
+   </script>
+    
+    <?php
+
+    $a = 1;  
+    $b = 11;
+
+    function test(){
+
+        $b+=15; 
+        $a+=5;
+        $a+=$b; 
+        echo $a;
+    }
+
+    test();
+    ?>
+    
+</body>
+</html>

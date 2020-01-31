@@ -1,0 +1,120 @@
+body {
+    margin: 0 auto;
+    background-color: firebrick;
+}
+
+#Wrapper {
+    margin: 0 auto;
+}
+
+#AppleBs {
+    height: 500px;
+    width: 25%;
+    float: left;
+    border-right: .2px solid white;
+    border-bottom: .2px solid white;
+    background-color: white;
+}
+
+#AppleBlogo {
+    padding-left: 32px;
+    padding-top: 120px;
+    height: 175px;
+    width: 85%;
+}
+
+#AppleBsPics {
+    height: 500px;
+    width: 74.96%;
+    float: left;
+    background-color: firebrick;
+    border: .2px solid firebrick;
+}
+
+#TRHPics {
+    height: 500px;
+    width: 74.96%;
+    float: left;
+    background-color: firebrick;
+    border: .2px solid firebrick;
+}
+
+#TRH {
+    height: 500px;
+    width: 25%;
+    float: left;
+    background-color: white;
+}
+
+#TRHlogo {
+    padding-left: 65px;
+    padding-top: 160px;
+}
+
+#OliveGarden {
+    height: 500px;
+    width: 25%;
+    float: left;
+    border: .2px solid white;
+    background-color: white;
+}
+
+#OGlogo {
+    padding-top: 125px;
+    width: 100%;
+}
+
+#OliveGardenPics {
+    height: 500px;
+    width: 74.96%;
+    float: left;
+    background-color: firebrick;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.food {
+    width: 100%;
+}
+
+.polaroid {
+    margin-top: 77px;
+    margin-left: 44px;
+    height: 300px;
+    width: 325px;
+    padding: 20px 15px 30px 15px;
+    text-align: center;
+    border: 1px solid #888;
+    background-color: antiquewhite;
+    font-size: 16pt;
+    position: relative;
+}
+
+.polaroid:hover {
+    z-index: 100;      
+    transform: rotate(0deg);   
+    box-shadow: 0 0 40px #333;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#youtube {
+    margin: 0 auto;
+    padding: 60px;
+    padding-left: 550px; 
+    background-color: firebrick;
+}
+
+#vid {
+    text-align: center;
+    margin: 30px;
+    padding-top: 30px;
+    color: white;
+    background-color: firebrick;
+}

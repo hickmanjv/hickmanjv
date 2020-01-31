@@ -1,0 +1,18 @@
+/* Created by Professor Wergeles for CS2830 at the University of Missouri */
+
+
+body {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12pt;
+}
+
+h1 {
+	font-size: 1.2em;
+}
+
+#infoBox {
+	border: 1px solid black;
+	padding: 15px;
+	width: 350px;
+	min-height: 200px;
+}
