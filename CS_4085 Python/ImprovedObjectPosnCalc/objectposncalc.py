@@ -84,9 +84,9 @@ def main():
         another_calculation = input("\nDo you want to run another calculation? (y/n): ")
 
         # Refresh boolean variable to continue or exit main while loop
-        if (another_calculation == "y" or another_calculation == "Y"):          #  found  this method:  if another_calculation in ["y", "Y"]:
-            run_calculation = True                                                                   #     run_calculation = False              credit:  pseudocubic on stackoverflow.com/questions/21790669
-        else:                                                                                                   # "" I couldn't find documentation on why this worked. ""
+        if (another_calculation == "y" or another_calculation == "Y"):
+            run_calculation = True
+        else:
             run_calculation = False
         
     
