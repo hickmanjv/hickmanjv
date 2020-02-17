@@ -87,7 +87,6 @@ def main():
         continue_program = input('Do you want to calculate another job? (y/n): ')
 
         # setting loop condition variable again to prevent infinite loop
-        # Figured this out based on pylint recommendation
         another_job = bool(continue_program in ('y', 'Y'))
 
 def calc_labor_hours(square_foot):
