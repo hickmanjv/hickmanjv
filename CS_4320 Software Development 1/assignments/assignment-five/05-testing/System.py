@@ -51,7 +51,7 @@ if __name__ == "__main__":
 
     # Initializing system object and loading data from "DB"
     gradeSystem = System()
-
+    
     # Logging in as a TA
     gradeSystem.login('cmhbf5', 'bestTA')
     # Changing grade of yted91
@@ -66,9 +66,9 @@ if __name__ == "__main__":
     # Log in as Professor
     gradeSystem.login('goggins', 'augurrox')
     # # Add a new student to a course
-    # gradeSystem.usr.add_student('yted91', 'databases')
+    #gradeSystem.usr.add_student('yted91', 'databases')
     # # Updating Data
-    # gradeSystem.reload_data()
+    #gradeSystem.reload_data()
     # # Remove a student from a course
     # gradeSystem.usr.drop_student('hdjsr7', 'databases')
     # Updating Data
@@ -83,6 +83,6 @@ if __name__ == "__main__":
     print('\nGrades: ')
     print(grades)
     # Print the assignmets for databases
-    assignments = gradeSystem.usr.view_assignments('databases')
+    assignments = gradeSystem.usr.view_assignments('cloud_computing')
     print('\nAssignments: ')
     print(assignments)
