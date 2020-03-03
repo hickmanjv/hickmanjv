@@ -5,6 +5,40 @@ Assignment: Number Stats - 2
 Date: 02/27/20
 """
 
+def median_of_num(num_list):
+    count = 0
+    index = 0
+    median = 0
+    # sorting the list of numbers to find the median
+    num_list.sort()
+    # checking for an even or odd number of numbers in the file
+    # then finding the median based on even / odd
+    if len(num_list) % 2 == 0:
+        index = (len(num_list) -1) // 2
+        median = (num_list[index] + num_list[index + 1]) / 2.0
+    else:
+        index = (len(num_list)-1) // 2
+        median = num_list[index]
+
+    return median
+
+def mode_of_num(number_counts):
+    value = 0
+    max_value = 0
+    mode = []
+    # obtaining the maximum value of the keys for finding the mode
+    for key in number_counts:
+        value = number_counts[key]
+
+        if value > max_value:
+            max_value = value
+
+            # creating a list of the most used numbers in the file aka mode
+    for key in number_counts:
+        if number_counts[key] == max_value:
+            mode.append(key)
+
+    return mode
 
 def main():
     """ Function that will open a file of integers, performing various
@@ -14,12 +48,8 @@ def main():
 
     # Declaring program variables
     total = 0
-    count = 0
     average = 0.0
     num_range = 0
-    median = 0
-    max_value = 0
-    mode = []
     num_list = []
     number_counts = {}
     another_test = 'y'
@@ -73,28 +103,9 @@ def main():
                     # Get the range of numeric values
                     num_range = max(num_list) - min(num_list)
 
-                    # sorting the list of numbers to find the median
-                    num_list.sort()
-                    # checking for an even or odd number of numbers in the file
-                    # then finding the median based on even / odd
-                    if count % 2 == 0:
-                        index = (count -1) // 2
-                        median = (num_list[index] + num_list[index + 1]) / 2.0
-                    else:
-                        index = (count-1) // 2
-                        median = num_list[index]
+                    median = median_of_num(num_list)
 
-                    # obtaining the maximum value of the keys for finding the mode
-                    for key in number_counts:
-                        value = number_counts[key]
-
-                        if value > max_value:
-                            max_value = value
-
-                    # creating a list of the most used numbers in the file aka mode
-                    for key in number_counts:
-                        if number_counts[key] == max_value:
-                            mode.append(key)
+                    mode = mode_of_num(number_counts)
 
                     # Printing the formatted operations to the screen
                     print("File name: ", number_file.name)
@@ -108,6 +119,12 @@ def main():
                     print("Mode: ", mode)
                 except IOError:
                     print("\nCould not open the file " + filename + ", please check the file.")
+                    # prompt for program loop
+                    another_test = input('\nWould you like to evaluate another file? (y/n): ')
+
+                    if another_test.lower() == 'y':
+                        filename = input('\n What is the name of the file you would like to evaluate? ')
+                        print()
 
                 # resetting variables to ensure clean loops
                 num_list.clear()
@@ -123,7 +140,13 @@ def main():
                     filename = input('\n What is the name of the file you would like to evaluate? ')
                     print()
         except IOError:
-            print('\nCould not open the file ' + filename + ', please check the file.')
+            print('Could not open the file ' + filename + ', please check the file.')
+            # prompt for program loop
+            another_test = input('\nWould you like to evaluate another file? (y/n): ')
 
+            if another_test.lower() == 'y':
+                filename = input('\n What is the name of the file you would like to evaluate? ')
+                print()         
+        
 # Run the main program
 main()
