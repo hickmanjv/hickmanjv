@@ -23,26 +23,6 @@ class Animal:
         else:
             self.__mood = 'sleepy'
 
-    """
-    # Looks as though the Challenge doesn't want the setters
-    
-    def set_animal_type(self, animal_type):
-        self.__animal_type = animal_type
-
-    def set_name(self, name):
-        self.__name = name
-
-    # this method will set the mood of the animal
-    # to 1 of 3 randomly selected moods
-    def set_mood(self):
-        if random.randint(1,3) == 1:
-            self.__mood = 'happy'
-        elif random.randint(1,3) == 2:
-            self.__mood = 'hungry'
-        else:
-            self.__mood = 'sleepy'
-    """
-
     # returns the type of the animal
     def get_animal_type(self):
         return self.__animal_type
@@ -56,3 +36,25 @@ class Animal:
     # returns the state of an animal object
     def __str__(self):
         return self.__name + ' the ' + self.__animal_type + ' is ' + self.__mood
+
+# Subclass of Animal
+class Mammal(Animal):
+
+    def __init__(self, hair_color, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.__hair_color = hair_color
+
+    # returns the hair color of a Mammal
+    def get_hair_color(self):
+        return self.__hair_color
+
+# Subclass of Animal
+class Bird(Animal):
+
+    def __init__(self, can_fly, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.__can_fly = can_fly
+
+    # returns the flight status of a Bird
+    def get_can_fly(self):
+        return self.__can_fly
