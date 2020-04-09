@@ -2,7 +2,7 @@
 
 ### Working Group  
 
-I am planning to join the Value working group meeting, there seems to be a lot of open spaces for metrics and value is a very big piece of the OSS puzzle.  
+I am planning to join the value working group meeting, there seems to be a lot of open spaces for metrics and value is a very big piece of the OSS puzzle.  
 
 ### Podcast  
 
