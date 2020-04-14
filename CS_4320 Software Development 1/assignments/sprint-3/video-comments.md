@@ -1,0 +1,5 @@
+## Thoughts on Inactive Contributers Metric  
+
+I really liked the discussion around the metric. People leaving projects is definitely a major issue for OSS and this metric could go a decent way to keep track of inactivity of people who had previously been active contributors. Having a solid template is a standardization that would be really important for cohesion. The current state metrics of a repo can be very useful to the Value working group. I had expected this review to be of a more technical nature and seeing how it was a lot of grammar and the wording of the metric to properly convey the exact nature of said metric made me feel like there is definitely some smaller stuff novices are able to jump in and help out on.  
+
+That aspect had always seemed pretty daunting to me. Especially if I didn't know truly what a project was about. These past few assignments have been amazing in helping me understand OSS, CHAOSS and Augur. I really enjoy the direction this class has went. 
