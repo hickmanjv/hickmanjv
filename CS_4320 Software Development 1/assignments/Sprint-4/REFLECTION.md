@@ -1,6 +1,6 @@
-##Reflections of SSO Project
+## Reflections of SSO Project
 
-###Which Projects?
+### Which Projects?
 I looked at a variety of SSO implementations for various different frameworks even. The starting point was the  
 two github repositories for Sails.js and Ory Hydra. I feel sorry for those in the class that haven't taken a web  
 development course, because Ory Hydra seemed extremely complicated to me and I've taken web development and have  
@@ -15,7 +15,7 @@ it to SSO or add that layer to it, weren't cutting it.
 I then found Auth0's website and man oh man. Perfect tutorials and explainations. Plus it supports a TON of  
 frameworks. Was hands down the best of the bunch that I looked at. 
 
-##Why I chose Auth0?
+## Why I chose Auth0?
 Many reasons, first it supported the framework that I wanted to use and provided tutorials for that framework as  
 well as the tutorial to set up and connect a page to the auth server. This is where I found a decent amount of stress  
 in the other implementations. 
@@ -31,7 +31,7 @@ Auth0's tutorials were amazing, it will literally walk you through setting up th
 choice. I have already messed around with Django some out of curiosity and found that they support that framework  
 really well. The documentation and explainations are very clear and easy to grasp as they aren't overly technical
 
-##How far I got?
+## How far I got?
 I would say 90%. I got the authentication working to automatically have you logged in for separate apps, but the
 callback URLs aren't completely correct. Say you start with App 1 and login, then you will go to App 1's dashboard 
 after being logged in. Say you start with App 2 and login you will still be taken to App 1's dashboard, but the login
@@ -40,7 +40,7 @@ for App 2 is valid.
 I'm still new to Django and some of the links are a little wonky. I've got it to a point that you could completely  
 change the apps content displays themselves to create a truly original SSO group.
 
-##What obstacles I encountered?
+## What obstacles I encountered?
 1. Complexity
 
 There are so many frameworks to choose from and so many different attempted solutions, that it was a little daunting
