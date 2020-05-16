@@ -15,7 +15,7 @@ pip install -r requirements.txt
 
 ###Once that is done:
 
-In terminal navigate to just inside the O1-login foler within the SSO_Project folder.  
+In terminal navigate to just inside the 01-login foler within the SSO_Project folder.  
 
 You should see a file called manage.py 
 
