@@ -1,4 +1,4 @@
-##Why participate in Open Source Software?
+## Why participate in Open Source Software?
 I remember when I was younger, a friend's dad downloaded a very early verision of Debian Linux which was probably
 around mid 1997. We messed around on message boards trying to find the correct software to mount his computers 
 various drives. His dad was geeking out about Linux and how it was going to finally topple Microsoft because people from all over the world are working to make it better every single day. It didn't sink in at the time just how new and exciting that era was for OSS as I was in middle school. Back then, it seemed as though people were doing that as a hobby to me, something they enjoyed doing. 
