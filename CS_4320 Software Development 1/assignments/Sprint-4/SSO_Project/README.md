@@ -38,6 +38,8 @@ python3 manage.py runserver 3000
 
 ## If it is running, then open http://localhost:3000 in your browser
 
+I used the username 'test@test.com' and password 'Testing321'
+
 You should be greeted with an Auth0 page to click the login button, which will redirect you to the SSO login server.
 To test this you can try to go directly to the dashboard without loggin in...
 
