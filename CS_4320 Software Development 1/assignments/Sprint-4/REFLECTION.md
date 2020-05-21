@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 # Reflections of SSO Project
 
 ## Which Projects?
+=======
+## Reflections of SSO Project
+
+### Which Projects?
+>>>>>>> 99d9e4ede46cc3a479e06960eeb7367b5263a72b
 I looked at a variety of SSO implementations for various different frameworks even. The starting point was the  
 two github repositories for Sails.js and Ory Hydra. I feel sorry for those in the class that haven't taken a web  
 development course, because Ory Hydra seemed extremely complicated to me and I've taken web development and have  

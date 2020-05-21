@@ -129,4 +129,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'blog-home'
 LOGIN_URL = 'login'
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99d9e4ede46cc3a479e06960eeb7367b5263a72b
