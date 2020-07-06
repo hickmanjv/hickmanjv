@@ -32,7 +32,7 @@ class ColorPickerViewController: UIViewController, UIPickerViewDataSource, UIPic
         
         // initializing the color label and screen to represent the first color in the array
         colorLabel.text = colors[0].name
-        view.backgroundColor = colors[0].uiColor
+        self.view.backgroundColor = colors[0].uiColor
     }
     
     // setting the number of columns of the color picker
@@ -68,7 +68,7 @@ class ColorPickerViewController: UIViewController, UIPickerViewDataSource, UIPic
         colorLabel.text = color.name
         // sets the entire backgorund color to the corresponding color
         // colorsPickerView.backgroundColor only changes the small picker section
-        view.backgroundColor = color.uiColor
+        self.view.backgroundColor = color.uiColor
     }
     
 }
